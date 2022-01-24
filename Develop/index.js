@@ -121,6 +121,12 @@ function writeToFile(fileName, data) {}
     promptProject().then(async data => {
         var fileData = await generateMarkdown(data)
         console.log(fileData)
+        fs.writeFileSync('README.md', fileData, function(err) {
+            if (err) {
+                throw err;
+            }
+        })
+        console.log('readme generator')
     });
 }
 

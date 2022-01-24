@@ -69,10 +69,11 @@ function generateMarkdown(data) {
   ${data.contributorName}
 
   ### Contact me
-  ${data.email}
-
+  [My Email](${data.email})
+  <${data.email}>
+  
   ### See my other work
-  [Github](https://github.com/${github})
+  [Github](https://github.com/${data.github})
    `;
   return readmeContent;
 }
