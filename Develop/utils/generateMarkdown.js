@@ -37,7 +37,43 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   console.log(data, "Fun1");
   let licenseLink = renderLicenseBadge(data.license)
-  const readmeContent = `# ${data.title}`;
+  const readmeContent = `
+  # ${data.title}
+  ## Table of Contents
+  * [License](#license)
+  * [Installation](#installation)
+  * [Testing](#testing)
+  * [Description](#description)
+  * [Languages](#languages)
+  * [Contributor](#contributorName)
+  * [Contact Me](#email)
+  * [See other work](#github)
+   
+
+  ### License
+  ${licenseLink}
+
+  ### Installation
+  ${data.installation}
+
+  ### Testing
+  ${data.testing}
+
+  ### Description
+  ${data.description}
+
+  ### Languages
+  ${data.languages}
+
+  ### Contributors
+  ${data.contributorName}
+
+  ### Contact me
+  ${data.email}
+
+  ### See my other work
+  [Github](https://github.com/${github})
+   `;
   return readmeContent;
 }
 

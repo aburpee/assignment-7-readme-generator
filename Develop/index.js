@@ -102,6 +102,11 @@ const promptProject = () => {
             name: 'license',
             message: 'what license do you choose for this project',
             choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0']
+        },
+        {
+            type: 'input',
+            name: 'testing',
+            message: 'how do you test your app',
         }
     ]);
 };
