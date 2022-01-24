@@ -1,9 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('./utils/generateMarkdown');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const promptUser = () => {
+const promptProject = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -28,15 +29,25 @@ const promptUser = () => {
                     return true;
                 }
                 else {
-                    console.log('please enter your github');
+                    console.log('please enter your github account');
                     return false;
                 }
             }
-        }
-    ]);
-};
-const promptProject = projectData => {
-    return inquirer.prompt([
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'whats your email address',
+            validate: emailInput => {
+                if(emailInput) {
+                    return true;
+                }
+                else {
+                    console.log('please enter your email address');
+                    return false;
+                }
+            }
+        },
         {
             type: 'input',
             name: 'title',
@@ -80,17 +91,33 @@ const promptProject = projectData => {
             type: 'input',
             name: 'contributorName',
             message: 'please add any contributors'
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'how do you install your app',
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'what license do you choose for this project',
+            choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0']
         }
     ]);
 };
 
-promptUser().then(promptProject);
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+async function init() {
+    promptProject().then(data => {
+        var fileData = await generateMarkdown(data)
+        console.log(fileData)
+    });
+}
 
 // Function call to initialize app
 init();
