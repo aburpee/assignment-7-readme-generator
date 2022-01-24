@@ -45,9 +45,9 @@ function generateMarkdown(data) {
   * [Testing](#testing)
   * [Description](#description)
   * [Languages](#languages)
-  * [Contributor](#contributorName)
-  * [Contact Me](#email)
-  * [See other work](#github)
+  * [Contributors](#contributors)
+  * [Email](#email)
+  * [Github](#github)
    
 
   ### License
@@ -68,11 +68,13 @@ function generateMarkdown(data) {
   ### Contributors
   ${data.contributorName}
 
-  ### Contact me
-  [My Email](${data.email})
-  <${data.email}>
+  ### Email
+  If you have any questions please reach out by email. 
+  [Email](${data.email})
   
-  ### See my other work
+
+  ### Github
+  If you'd like to see my other work please visit my github.
   [Github](https://github.com/${data.github})
    `;
   return readmeContent;

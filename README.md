@@ -1,38 +1,40 @@
 
-  # d
+  # read me generator
   ## Table of Contents
   * [License](#license)
   * [Installation](#installation)
   * [Testing](#testing)
   * [Description](#description)
   * [Languages](#languages)
-  * [Contributor](#contributorName)
-  * [Contact Me](#email)
-  * [See other work](#github)
+  * [Contributors](#contributors)
+  * [Email](#email)
+  * [Github](#github)
    
 
   ### License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
   ### Installation
-  adalk
+  install node and inquirer using npm i
 
   ### Testing
-  ;alkbna
+  run node index.js
 
   ### Description
-  e
+  this is a project i am building to generate a readme file using the command line.
 
   ### Languages
   js,node
 
   ### Contributors
-  adam
+  sangeetha
 
-  ### Contact me
-  [My Email](e)
-  <e>
+  ### Email
+  If you have any questions please reach out by email. 
+  [Email](arburpee@gmail.com)
   
-  ### See my other work
-  [Github](https://github.com/b)
+
+  ### Github
+  If you'd like to see my other work please visit my github.
+  [Github](https://github.com/aburpee)
    
