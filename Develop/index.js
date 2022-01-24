@@ -35,25 +35,56 @@ const promptUser = () => {
         }
     ]);
 };
-// const promptProject = projectData => {
-//     return inquirer.prompt([
-//         {
-//             type: 'input',
-//             name: 'name',
-//             message: 'what is the title of your project',
-//             validate: titleInput => {
-//                 if (titleInput) {
-//                     return true;
-//                 }
-//                 else {
-//                     console.log('please enter your project title');
-//                 }
-//             }
-//         }
-//     ])
-// }
+const promptProject = projectData => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: 'what is the title of your project',
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                }
+                else {
+                    console.log('please enter your project title');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'add a brief description of your project',
+        },
+        {
+            type: 'checkbox',
+            name: 'languages',
+            message: 'what languages did you use for this project',
+            choices: ['js', 'html', 'css', 'es6', 'node', 'jquery', 'bootstrap']
+        },
+        {
+            type: 'input',
+            name: 'link',
+            message: 'enter the url to your project',
+            validate: linkInput => {
+                if (linkInput) {
+                    return true;
+                }
+                else {
+                    console.log('please enter your project url');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contributorName',
+            message: 'please add any contributors'
+        }
+    ]);
+};
 
-promptUser();
+promptUser().then(promptProject);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
