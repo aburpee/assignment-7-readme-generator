@@ -98,7 +98,7 @@ const promptProject = () => {
             message: 'how do you install your app',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'what license do you choose for this project',
             choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0']
@@ -112,8 +112,8 @@ const promptProject = () => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-async function init() {
-    promptProject().then(data => {
+ function init() {
+    promptProject().then(async data => {
         var fileData = await generateMarkdown(data)
         console.log(fileData)
     });
