@@ -17,19 +17,19 @@
   [License: Apache](https://opensource.org/licenses/Apache-2.0)
 
   ### Installation
-  First, install node.js using sudo apt install nodejs. Then, install inquirer using npm install inquirer.
+  First, install the node package manager using sudo apt install nodejs. Then install the package inquirer using npm install inquirer. That's all the user will need for this application.
 
   ### Testing
-  The user can test the app by running node index.js in the correct directory, in this case Develop. 
+  To test the app, go to the appropriate directory that hosts the index.js file. Simply run node index.js to begin the prompts. The README.md file will be automatically generated in the home directory. It can be viewed using the md preview. 
 
   ### Description
-  This project is meant to streamline the rote process of creating a readme file for any github contributions. This will enable users to answer a prompted list of questions that are scalable for any size project. 
+  This project is an exploration into automatically generating a README.md file. It will prompt the user with a series of questions that allow them to describe their project and other details required in a quality readme, including contributors, languages, and contact information. 
 
   ### Languages
   js,node
 
   ### Contributors
-  Adam Burpee
+  Adam Burpee, Sangeeth KP (tutor)
 
   ### Email
   If you have any questions please reach out by email. 
